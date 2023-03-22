@@ -1,0 +1,31 @@
+* {
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 700;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+  #cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 860px) {
+  #container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #cards-container {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  #table-container {
+    width: 90%;
+  }
+}
