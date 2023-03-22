@@ -1,0 +1,12 @@
+<div id="cards-container">
+  <div *ngFor="let product of productsInfo" class="card-div">
+    <img
+      src="../../assets/cloud-pos.png"
+      class="card-image"
+      alt="{{ product.id }}"
+      width="100"
+    />
+    <p class="product-info">{{ product.product }}</p>
+    <p class="product-price">${{ product.price }}</p>
+  </div>
+</div>
