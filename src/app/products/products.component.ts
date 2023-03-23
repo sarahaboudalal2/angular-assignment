@@ -21,4 +21,7 @@ export class ProductsComponent implements OnInit {
       this.productsInfo = response;
     });
   }
+  onClick(product: any): void {
+    console.log(product.product);
+  }
 }

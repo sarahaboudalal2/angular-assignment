@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-#cards-container div:nth-of-type(1) {
+/* .cards-container div:nth-of-type(1) {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
@@ -38,7 +38,7 @@
     rgb(49, 49, 49) 50%,
     rgba(255, 255, 255, 1) 100%
   );
-}
+} */
 
 .cloud-image {
   width: 60%;
