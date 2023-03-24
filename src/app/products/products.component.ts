@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CardClickService } from '../services/cardClick.service';
 
-type Product = {
+export type Product = {
   id: number;
   product: string;
   price: number;
@@ -21,7 +22,11 @@ export class ProductsComponent implements OnInit {
       this.productsInfo = response;
     });
   }
-  onClick(product: any): void {
-    console.log(product.product);
+  // onClick(product: Product): void {
+  //   console.log(product.product);
+  // }
+  onClick(product: Product) {
+    const cardClick = new CardClickService();
+    cardClick.OnCardClick(product);
   }
 }
