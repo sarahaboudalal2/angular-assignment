@@ -6,8 +6,11 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <div id="container">
-  <app-products [products]="getProductsInfp()"></app-products>
-  <app-table></app-table>
+  <app-products
+    [products]="getProductsInfo()"
+    (cardClick)="cardClicked($event)"
+  ></app-products>
+  <app-table [tableProducts]="tableData"></app-table>
 </div>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

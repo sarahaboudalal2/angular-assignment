@@ -1,5 +1,5 @@
 // import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CardClickService } from '../services/cardClick.service';
 
 export type Product = {
@@ -22,6 +22,11 @@ export class ProductsComponent {
       price: 0,
     },
   ];
+  @Output() cardClick = new EventEmitter<Product>();
+
+  onCardClick(product: Product) {
+    this.cardClick.emit(product);
+  }
   // public constructor(
   //   private cardClick: CardClickService
   // ) {}

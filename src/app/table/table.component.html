@@ -1,19 +1,30 @@
 <div id="table-container">
   <table id="table">
-    <tr>
-      <th>الإسم</th>
-      <th>السعر</th>
-      <th>الكمية</th>
-      <th>المجموع</th>
-      <th>
-        <img
-          src="../../assets/x-mark.png"
-          alt="x-mark"
-          id="x-mark"
-          width="100"
-        />
-      </th>
-    </tr>
+    <thead>
+      <tr>
+        <th>الإسم</th>
+        <th>السعر</th>
+        <th>الكمية</th>
+        <th>المجموع</th>
+        <th>
+          <img
+            src="../../assets/x-mark.png"
+            alt="x-mark"
+            id="x-mark"
+            width="100"
+          />
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let tableProduct of tableProducts">
+      <tr>
+        <td>{{ tableProduct.product }}</td>
+        <td>${{ tableProduct.price }}</td>
+        <td>1</td>
+        <td>{{ 1 * tableProduct.price }}</td>
+        <td>-</td>
+      </tr>
+    </tbody>
   </table>
   <section>
     <h4>المجموع:</h4>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Product } from './products/products.component';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,16 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getProductsInfp() {
+  getProductsInfo() {
     return this.productsInfo;
     console.log(this.productsInfo);
+  }
+
+  tableData: any[] = [];
+
+  cardClicked(productData: object) {
+    this.tableData.push(productData);
+    console.log(productData);
+    console.log(this.tableData);
   }
 }

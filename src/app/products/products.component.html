@@ -1,6 +1,6 @@
 <div id="cards-container">
   <div *ngFor="let product of products" class="cards-container">
-    <div class="card-div">
+    <div class="card-div" (click)="onCardClick(product)">
       <img
         src="../../assets/cloud-pos.png"
         class="card-image"
