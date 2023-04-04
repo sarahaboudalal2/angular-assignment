@@ -11,6 +11,7 @@ export class TableComponent {
       id: 0,
       product: '',
       price: 0,
+      quantity: 0,
     },
   ];
 }

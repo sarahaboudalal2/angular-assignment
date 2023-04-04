@@ -20,8 +20,8 @@
       <tr>
         <td>{{ tableProduct.product }}</td>
         <td>${{ tableProduct.price }}</td>
-        <td>1</td>
-        <td>{{ 1 * tableProduct.price }}</td>
+        <td>{{ tableProduct.quantity }}</td>
+        <td>${{ (tableProduct.quantity * tableProduct.price).toFixed(2) }}</td>
         <td>-</td>
       </tr>
     </tbody>

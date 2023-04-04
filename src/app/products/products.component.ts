@@ -6,6 +6,7 @@ export type Product = {
   id: number;
   product: string;
   price: number;
+  quantity: number;
 };
 
 @Component({
@@ -20,6 +21,7 @@ export class ProductsComponent {
       id: 0,
       product: '',
       price: 0,
+      quantity: 0,
     },
   ];
   @Output() cardClick = new EventEmitter<Product>();

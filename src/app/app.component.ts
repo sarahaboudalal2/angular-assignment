@@ -24,7 +24,13 @@ export class AppComponent implements OnInit {
 
   tableData: any[] = [];
 
-  cardClicked(productData: object) {
-    this.tableData.push(productData);
+  cardClicked(productData: Product) {
+    const findProduct = this.tableData.find((data) => data === productData);
+    // console.log(findProduct);
+    if (!findProduct) {
+      this.tableData.push(productData);
+    } else {
+      productData.quantity++;
+    }
   }
 }

@@ -2,26 +2,31 @@
   {
     "id": "1",
     "product": "600 مل * 30 علبة",
-    "price": "60.0"
+    "price": "60.0",
+    "quantity": "1"
   },
   {
     "id": "2",
     "product": "400 مل * 30 علبة",
-    "price": "50.0"
+    "price": "50.0",
+    "quantity": "1"
   },
   {
     "id": "3",
     "product": "غالون أبيض 16 لتر",
-    "price": "7.00"
+    "price": "7.00",
+    "quantity": "1"
   },
   {
     "id": "4",
     "product": "شامبو",
-    "price": "3.00"
+    "price": "3.00",
+    "quantity": "1"
   },
   {
     "id": "5",
     "product": "conditioner",
-    "price": "2.00"
+    "price": "2.00",
+    "quantity": "1"
   }
 ]
