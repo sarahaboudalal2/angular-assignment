@@ -30,4 +30,13 @@ export class TableComponent {
     }
     return totalPrice;
   }
+
+  removeItem(item: Product) {
+    if (item.quantity > 1) {
+      item.quantity--;
+    } else {
+      const index = this.tableProducts.indexOf(item);
+      this.tableProducts.splice(index, 1);
+    }
+  }
 }

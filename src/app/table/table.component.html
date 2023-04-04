@@ -22,7 +22,7 @@
         <td>${{ tableProduct.price }}</td>
         <td>{{ tableProduct.quantity }}</td>
         <td>${{ getPriceTimesQuantity(tableProduct) }}</td>
-        <td>-</td>
+        <td class="minus" (click)="removeItem(tableProduct)">-</td>
       </tr>
     </tbody>
   </table>

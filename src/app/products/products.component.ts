@@ -29,21 +29,4 @@ export class ProductsComponent {
   onCardClick(product: Product) {
     this.cardClick.emit(product);
   }
-  // public constructor(
-  //   private cardClick: CardClickService
-  // ) {}
-  // public ngOnInit(): void {
-  //   const url: string = './assets/products.json';
-  //   this.http.get(url).subscribe((response) => {
-  //     this.productsInfo = response;
-  //   });
-  // }
-  // onClick(product: Product): void {
-  //   console.log(product.product);
-  // }
-
-  // onClick(product: Product) {
-  //   // const cardClick = new CardClickService();
-  //   this.cardClick.OnCardClick(product);
-  // }
 }

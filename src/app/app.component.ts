@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
     const url: string = './assets/products.json';
     this.http.get(url).subscribe((response) => {
       this.productsInfo = response;
-      // console.log(this.productsInfo);
     });
   }
 
@@ -26,7 +25,6 @@ export class AppComponent implements OnInit {
 
   cardClicked(productData: Product) {
     const findProduct = this.tableData.find((data) => data === productData);
-    // console.log(findProduct);
     if (!findProduct) {
       this.tableData.push(productData);
     } else {

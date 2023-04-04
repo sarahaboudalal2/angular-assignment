@@ -49,3 +49,7 @@ th img {
   display: inline;
   color: red;
 }
+
+.minus {
+  cursor: pointer;
+}
