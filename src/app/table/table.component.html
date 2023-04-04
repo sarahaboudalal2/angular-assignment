@@ -21,14 +21,14 @@
         <td>{{ tableProduct.product }}</td>
         <td>${{ tableProduct.price }}</td>
         <td>{{ tableProduct.quantity }}</td>
-        <td>${{ (tableProduct.quantity * tableProduct.price).toFixed(2) }}</td>
+        <td>${{ getPriceTimesQuantity(tableProduct) }}</td>
         <td>-</td>
       </tr>
     </tbody>
   </table>
   <section>
     <h4>المجموع:</h4>
-    <h4 id="total">0.00</h4>
+    <h4 id="total">{{ getTotalPrice() }}</h4>
     <p class="dollar">$</p>
   </section>
 </div>
