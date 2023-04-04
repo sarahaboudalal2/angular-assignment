@@ -14,20 +14,17 @@ export class AppComponent implements OnInit {
     const url: string = './assets/products.json';
     this.http.get(url).subscribe((response) => {
       this.productsInfo = response;
-      console.log(this.productsInfo);
+      // console.log(this.productsInfo);
     });
   }
 
   getProductsInfo() {
     return this.productsInfo;
-    console.log(this.productsInfo);
   }
 
   tableData: any[] = [];
 
   cardClicked(productData: object) {
     this.tableData.push(productData);
-    console.log(productData);
-    console.log(this.tableData);
   }
 }
