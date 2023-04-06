@@ -9,14 +9,14 @@ th {
   white-space: nowrap;
 }
 
-th img {
-  width: 30px;
-}
-
 #table {
   text-align: center;
   width: auto;
   white-space: nowrap;
+}
+
+.align-center {
+  text-align: center !important;
 }
 
 #table-container {

@@ -1,31 +1,33 @@
 <div id="table-container">
-  <table id="table">
-    <thead>
+  <p-table
+    [value]="tableProducts"
+    [class]="'align-center'"
+    [tableStyle]="{ 'min-width': '35rem' }"
+    id="table"
+  >
+    <ng-template pTemplate="header">
       <tr>
-        <th>الإسم</th>
+        <th class="align-center">الإسم</th>
         <th>السعر</th>
         <th>الكمية</th>
         <th>المجموع</th>
         <th>
-          <img
-            src="../../assets/x-mark.png"
-            alt="x-mark"
-            id="x-mark"
-            width="100"
-          />
+          <i class="pi pi-times"></i>
         </th>
       </tr>
-    </thead>
-    <tbody *ngFor="let tableProduct of tableProducts">
+    </ng-template>
+    <ng-template pTemplate="body" let-tableProduct>
       <tr>
-        <td>{{ tableProduct.product }}</td>
-        <td>${{ tableProduct.price }}</td>
-        <td>{{ tableProduct.quantity }}</td>
-        <td>${{ getPriceTimesQuantity(tableProduct) }}</td>
-        <td class="minus" (click)="removeItem(tableProduct)">-</td>
+        <td class="align-center">{{ tableProduct.product }}</td>
+        <td class="align-center">${{ tableProduct.price }}</td>
+        <td class="align-center">{{ tableProduct.quantity }}</td>
+        <td class="align-center">${{ getPriceTimesQuantity(tableProduct) }}</td>
+        <td class="minus align-center" (click)="removeItem(tableProduct)">
+          <i class="pi pi-minus-circle"></i>
+        </td>
       </tr>
-    </tbody>
-  </table>
+    </ng-template>
+  </p-table>
   <section>
     <h4>المجموع:</h4>
     <h4 id="total">{{ getTotalPrice() }}</h4>
