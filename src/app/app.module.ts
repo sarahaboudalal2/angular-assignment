@@ -7,10 +7,17 @@ import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './table/table.component';
 import { TableModule } from 'primeng/table';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [AppComponent, ProductsComponent, TableComponent],
-  imports: [BrowserModule, TableModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    TableModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CardModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

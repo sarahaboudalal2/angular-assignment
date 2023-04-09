@@ -1,14 +1,14 @@
 #cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 100%;
+  /* width: 100%; */
 }
 
-.card-div {
+:host ::ng-deep #card-div .p-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between !important;
   box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.37);
   -webkit-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.37);
   -moz-box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.37);
@@ -23,23 +23,26 @@
   padding: 5px;
   text-align: center;
   margin: 3px;
-  max-width: 200px;
+  max-width: 200px !important;
   height: 250px;
 }
-.card-div:hover {
+#card-div:hover {
   cursor: pointer;
 }
 
-/* .cards-container div:nth-of-type(1) {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgb(49, 49, 49) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-} */
-
 .cloud-image {
   width: 60%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #cards-container {
+    width: 90%;
+    margin-bottom: 15px;
+  }
 }

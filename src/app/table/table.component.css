@@ -53,3 +53,9 @@ th {
 .minus {
   cursor: pointer;
 }
+
+/* @media only screen and (max-width: 860px) {
+  #table-container {
+    width: 90%;
+  }
+} */
