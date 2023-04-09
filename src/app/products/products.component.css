@@ -24,7 +24,7 @@
   text-align: center;
   margin: 3px;
   max-width: 200px !important;
-  height: 250px;
+  /* height: 250px; */
 }
 #card-div:hover {
   cursor: pointer;

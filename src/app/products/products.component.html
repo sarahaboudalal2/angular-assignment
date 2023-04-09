@@ -4,14 +4,18 @@
     *ngFor="let product of products"
     (click)="onCardClick(product)"
   >
-    <img
-      src="../../assets/cloud-pos.png"
-      class="card-image"
-      alt="{{ product.id }}"
-      width="100"
-    />
+    <ng-template pTemplate="title">
+      <img
+        src="../../assets/cloud-pos.png"
+        class="card-image"
+        alt="{{ product.id }}"
+        width="100"
+      />
+    </ng-template>
     <p class="product-info">{{ product.product }}</p>
-    <p class="product-price">${{ product.price }}</p>
+    <ng-template pTemplate="footer">
+      <p class="product-price">${{ product.price }}</p>
+    </ng-template>
   </p-card>
 </div>
 
